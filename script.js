@@ -187,7 +187,7 @@ function newIndexOf(array, searchElement, initialIndex){
 // newConcat
 
 let myVetor2 = ["Steve", "Elon", "Bill", "Jeff"]
-
+let myVetor10 = [20,10,50,5,7,90]
 
 function newConcat(...arguments){
     let newArray = []
@@ -198,7 +198,7 @@ function newConcat(...arguments){
     return newArray
     
 }
-// console.log(newConcat(myVetor10, myVetor2, myVetor3))
+console.log(newConcat(myVetor10, myVetor2, "rrrrrr"))
 
 //////////////////////////////////////////////////////////////////
 // newJoin
