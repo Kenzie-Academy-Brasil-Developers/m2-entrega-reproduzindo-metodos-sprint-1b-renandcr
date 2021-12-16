@@ -7,16 +7,16 @@ function newForEach(array, callback){
 // newForEach(myVetor, soma)
 
 /////////////////////////////////////////////////////////
-// newMap
+// newMaps
 function newMap(array, callback){
     let newArray = []
     for(let i = 0; i < array.length; i++){
-        callback(array[i], i, [array,...newArray])
-        newArray.push(array[i])        
+        let testing = callback(array[i], i, array)
+        newArray.push(testing)        
     }
     return newArray
 }
-// newMap(myVetor, soma)
+// console.log(newMap(myVetor3, soma))
 
 /////////////////////////////////////////////////////////
 // newFilter
@@ -70,21 +70,19 @@ function newFindIndex(array, callback){
 
 ///////////////////////////////////////////////////////
 // newReduce
+const vetor4 = [2,4,6,8,9,2,4]
 function newReduce(array, callback){
     let acc = 0
-    for (let i = 0; i < array.length; i++){
-        acc = callback(acc, array[i], i, array)   
-        console.log(array[i])
-        
-    }
-    return acc
+        for (let i = 0; i < array.length; i++){
+            acc = callback(acc, array[i], i, array)   
+        }
+
+    return acc       
 }
 
-// console.log(newReduce(vetor3, function(acc, valorAtual){
+// console.log(newReduce(vetor4, function(acc, valorAtual){
 //     return  acc + valorAtual
 // }))
-
-
 
 /////////////////////////////////////////////////////////
 // newSome
@@ -99,9 +97,9 @@ function newSome(array, callback){
             result = false
         }
     }
-    // return result
+    return result
 }
-// console.log(newSome(myVetor2, testando))
+// console.log(newSome(myVetor5, teste))
 
 ////////////////////////////////////////////////////////
 // newEvery
@@ -116,7 +114,7 @@ function newEvery(array, callback){
             result = true
         }
     }
-    // return result
+    return result
 }
 // console.log(newEvery(myVetor, testando)) 
 
@@ -198,7 +196,7 @@ function newConcat(...arguments){
     return newArray
     
 }
-console.log(newConcat(myVetor10, myVetor2, "rrrrrr"))
+// console.log(newConcat(myVetor10, myVetor2, "rrrrrr"))
 
 //////////////////////////////////////////////////////////////////
 // newJoin
